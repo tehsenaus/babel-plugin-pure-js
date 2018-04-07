@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-pure-js",
+  "version": "0.1.0",
+  "description": "A pure-functional subset of JS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublish": "npm run test",
+    "prepush": "npm run prepublish",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "author": "Sean Micklethwaite",
+  "license": "MIT",
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
+    "babel-core": "^6.26.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3"
+  }
+}
