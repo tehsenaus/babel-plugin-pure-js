@@ -1,13 +1,6 @@
 const SRC_FILE_PATT = /\.pure\.jsx?|unknown$/;
 
 const visitor = {
-	Program(path, state) {
-		const fileName = state.file.opts.sourceFileName;
-		if ( !SRC_FILE_PATT.test(fileName) ) {
-			path.stop();
-		}
-	},
-
 	Identifier(path) {
 		if (path.node.name === 'foo') {
 			path.node.name = 'bar';
