@@ -7,18 +7,22 @@
     "test": "jest",
     "prepublish": "npm run test",
     "prepush": "npm run prepublish",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "release": "standard-version"
   },
   "author": "Sean Micklethwaite",
   "license": "MIT",
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",
     "@commitlint/config-conventional": "^6.1.3",
     "babel-core": "^6.26.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "standard-version": "^4.3.0"
   }
 }
