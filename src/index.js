@@ -35,8 +35,6 @@ module.exports = function pureJsPlugin(babel) {
 					// We need the plugin to run before other babel plugins, which may generate 'impure' code
 					// https://jamie.build/babel-plugin-ordering.html
 					path.traverse(visitor);
-				} else {
-					path.stop();
 				}
 			},
 		}
